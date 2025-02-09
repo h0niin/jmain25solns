@@ -1,0 +1,251 @@
+<html lang="en">
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#1589EE">
+    <title>JEE Main Solutions with Explanations by Unacademy</title>
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB60lEQVR4AY2RA6wdURCG57K2uXtrm3FqY1U7ZmM1LqJyWXvPqd24ipMqRm0bq6uZZ783yX84338wUB6+NRB8Z0gzz+w31zNE7hnCW08XsqiIxrSGe3P8/cOaefYgqIiQzQXPyIBnDeiOSfs8ve93VKFuCd8ph3LRDPyDowFwgPBAgi9TUpNkCFeR6UksuoxJk2uTYVSg93313Ro0FwoFukH/uXi1b02EvUgXTvFDE+Y0Z9KuZlydTe9nTYOFVzlD3DT+9MJxwOSb4C4tJJnM0EB404Q338sb4gQ4s2xKzJUeEEyKM+k1/DMzJ32979d64JxviG7e7N8LuDYL4aflMAnnIbRn8pbHzvClgS7cJqAKHCFs/bEHdwCuyjF36TuCahngNV4AUwzzyNSBoSFQNYKyk8139pC2caasRvhzTbjiCfQROMkDk5zVJ2Z1Cw1xG8InPjnDOia4ug7hr3XBJGRdaM7VuZj0jUxiTLY2n5jepWAPopPX0Hp9MO0148pc6H5+TRqd9pVtZBNM3pHkysqKa9d/+l5iIc0UaMm17nFXulzm7KF+NQRTLjHEQubSJkjhAJ/SPcGkfQh/rw+kvQSe3BzhZhzhc6ugItAR2p5d0QzN5qARw1PeYJkiEo1pjfbanF3erAXmlkcRn5/8LiVtHDkAAAAASUVORK5CYII=" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.mathongo.com/public/lk/assets/css/libs.bundle.css">
+    <link rel="stylesheet" href="https://www.mathongo.com/public/lk/assets/css/theme.bundle.css">
+    <style>
+        .form-control { border-color: #dbdbdb; }
+        #iframeContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #pdfViewer {
+            width: 90%;
+            height: 90%;
+            border: none;
+            background: white;
+        }
+#closeIframe {
+    display: flex;
+    height: 2em;
+    width: 77px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 6.9px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#closeIframe > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+#closeIframe:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+#closeIframe:hover {
+    transform: translateY(-2px);
+}
+
+#closeIframe:focus {
+    outline: none;
+    transform: translateY(-2px);
+}
+
+
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container"></div>
+</nav>
+<section class="section" style="margin-top: -36.9px;">
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-lg-10 mx-auto py-5 py-md-9">
+                <h1 class="fw-bold text-center">JEE Main 2025 January Shiftwise Solutions</h1>
+                <p class="text-center mb-6 text-danger">
+                    Select your exam shift and get the solutions by Unacademy based on the answer key released by NTA.
+                </p>
+                <form id="examForm" class="mb-6">
+                    <div class="form-group mb-6">
+                        <label class="form-label fw-bold text-primary" for="examDate">Select your Exam Date</label>
+                        <select class="form-control" id="examDate">
+                            <option value="">-- Select Date --</option>
+                            <option value="22/01/2025">22 January 2025</option>
+                            <option value="23/01/2025">23 January 2025</option>
+                            <option value="24/01/2025">24 January 2025</option>
+                            <option value="28/01/2025">28 January 2025</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-6">
+                        <label class="form-label fw-bold text-primary">Select your Shift</label>
+                        <div class="mb-4">
+                            <input type="radio" id="shift1" name="shift" value="Morning">
+                            <label for="shift1">Shift 1 - Morning Shift</label>
+                        </div>
+                        <div class="mb-4">
+                            <input type="radio" id="shift2" name="shift" value="Evening">
+                            <label for="shift2">Shift 2 - Evening Shift</label>
+                        </div>
+                    </div>
+                    <div class="form-group mb-6">
+                        <label class="form-label fw-bold text-primary" for="subject">Select Category</label>
+                        <select class="form-control" id="subject">
+                            <option value="">-- Select Material --</option>
+                            <option value="Question">Question Paper</option>
+                            <option value="Solution">Solutions</option>
+                            <option value="Video">Video Solution</option>
+                        </select>
+                    </div>
+                    <button class="btn w-100 btn-primary" type="submit">Display</button>
+                </form>
+
+<div style="text-align: center; margin-top: 100px;">
+<div style="text-align:center; margin-top:50px;">
+    <a href="https://jeeuncocked.vercel.app" target="_blank" 
+       style="font-size:18px; font-weight: bold; font-style: italic; color:#007bff; text-decoration:none; transition:color 0.3s ease-in-out;"
+       onmouseover="this.style.color='#2b50c7'" 
+       onmouseout="this.style.color='#007bff'">
+        Click For Allen Solutions
+    </a> </div>
+<p class="mb-0 fs-sm text-body-secondary mt-8">
+              Credits
+            		</p>
+        <a class="navbar-brand" href="https://www.mathongo.com" style="margin-right: 20px; display: inline-block;">
+            <img src="https://www.mathongo.com/public/brand/mathongo/logo-dark.svg" style="width: 69px;" alt="MathonGo Logo">
+        </a>
+        <a class="navbar-brand" href="https://www.allenoverseas.com" style="display: inline-block;">
+            <img src="https://d23hiuzhfk4xdw.cloudfront.net/wp-content/uploads/2023/05/03073357/cropped-cropped-logo.webp" style="width: 69px;" alt="Overseas Logo">
+        </a>
+    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="iframeContainer">
+        <button id="closeIframe">
+  <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+  <span>Esc</span>
+</button>
+        <iframe id="pdfViewer"></iframe>
+    </div>
+
+<script>
+const urls = {
+    "22/01/2025": {
+        "Morning": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/22180952/Question-Paper-Shift-1-22-Jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/22204203/SOLUTION-Shift-1-22-jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=tXyUw11MtHo"
+        },
+        "Evening": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/23095257/Question-Paper-Shift-2-22-Jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/23095256/Solution-Shift-2-22-jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=cHM8uDktc4s"
+        }
+    },
+    "23/01/2025": {
+        "Morning": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/23171942/Question-Paper-Shift-1-23-Jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/23171942/Solution-Shift-1-23-jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=TfTNhZtDRdk"
+        },
+        "Evening": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/24124639/Question-Paper-Shift-2-23-Jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/24124638/Solution-Shift-2-23-Jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=BnAvfM7rUSo"
+        }
+    },
+    "24/01/2025": {
+        "Morning": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/24215034/Question-Paper-24-Jan-Shift-1.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/24215035/Solution-24-Jan-Shift-1.pdf",
+            "Video": "https://www.youtube.com/watch?v=BNB8ehWBnS4"
+        },
+        "Evening": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/28131306/Question-Paper-Shift-2-24-jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/28131305/Solution-Shift-2-24-jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=cISHk1m4lXk"
+        }
+    },
+    "28/01/2025": {
+        "Morning": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/29095408/Question-Paper-Shift-1-28-Jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/01/29095407/Solution-Shift-1-28-Jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=rZOVx5I3pTk"
+        },
+        "Evening": {
+            "Question": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/02/05142444/Question-Paper-Shift-2-28-jan.pdf",
+            "Solution": "https://static.uacdn.net/wp-content/uploads/sites/2/2025/02/05142443/Solution-Shift-2-28-Jan.pdf",
+            "Video": "https://www.youtube.com/watch?v=Mnxd4pxLa40"
+        }
+    }
+};
+
+
+document.getElementById("examForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const examDate = document.getElementById("examDate").value;
+    const shift = document.querySelector('input[name="shift"]:checked');
+    const category = document.getElementById("subject").value;
+
+    if (!examDate || !shift || !category) {
+        alert("Please select all options.");
+        return;
+    }
+
+    const shiftValue = shift.value;
+    
+    if (!urls[examDate] || !urls[examDate][shiftValue] || !urls[examDate][shiftValue][category]) {
+        alert("No data available for the selected options.");
+        return;
+    }
+
+    const pdfUrl = urls[examDate][shiftValue][category];
+
+    document.body.classList.add("modal-open");
+    document.getElementById("iframeContainer").style.display = "flex";
+    if (category === "Video") {
+        window.open(pdfUrl, "_blank");
+        document.getElementById("iframeContainer").style.display = "none";
+        document.body.classList.remove("modal-open");
+    } else {
+        document.getElementById("pdfViewer").src = pdfUrl;
+    }
+});
+
+document.getElementById("closeIframe").addEventListener("click", function () {
+    document.getElementById("iframeContainer").style.display = "none";
+    document.body.classList.remove("modal-open");
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        document.getElementById("iframeContainer").style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
+</script>
+
+</body>
+</html>
