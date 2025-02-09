@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#1589EE">
@@ -10,18 +8,77 @@
     <link rel="stylesheet" href="https://www.mathongo.com/public/lk/assets/css/theme.bundle.css">
     <style>
         .form-control { border-color: #dbdbdb; }
+        #iframeContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #pdfViewer {
+            width: 90%;
+            height: 90%;
+            border: none;
+            background: white;
+        }
+#closeIframe {
+    display: flex;
+    height: 2em;
+    width: 77px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 6.9px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#closeIframe > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+#closeIframe:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+#closeIframe:hover {
+    transform: translateY(-2px);
+}
+
+#closeIframe:focus {
+    outline: none;
+    transform: translateY(-2px);
+}
+
+
+        body.modal-open {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="https://jeemain.nta.nic.in/">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB60lEQVR4AY2RA6wdURCG57K2uXtrm3FqY1U7ZmM1LqJyWXvPqd24ipMqRm0bq6uZZ783yX84338wUB6+NRB8Z0gzz+w31zNE7hnCW08XsqiIxrSGe3P8/cOaefYgqIiQzQXPyIBnDeiOSfs8ve93VKFuCd8ph3LRDPyDowFwgPBAgi9TUpNkCFeR6UksuoxJk2uTYVSg93313Ro0FwoFukH/uXi1b02EvUgXTvFDE+Y0Z9KuZlydTe9nTYOFVzlD3DT+9MJxwOSb4C4tJJnM0EB404Q338sb4gQ4s2xKzJUeEEyKM+k1/DMzJ32979d64JxviG7e7N8LuDYL4aflMAnnIbRn8pbHzvClgS7cJqAKHCFs/bEHdwCuyjF36TuCahngNV4AUwzzyNSBoSFQNYKyk8139pC2caasRvhzTbjiCfQROMkDk5zVJ2Z1Cw1xG8InPjnDOia4ug7hr3XBJGRdaM7VuZj0jUxiTLY2n5jepWAPopPX0Hp9MO0148pc6H5+TRqd9pVtZBNM3pHkysqKa9d/+l5iIc0UaMm17nFXulzm7KF+NQRTLjHEQubSJkjhAJ/SPcGkfQh/rw+kvQSe3BzhZhzhc6ugItAR2p5d0QzN5qARw1PeYJkiEo1pjfbanF3erAXmlkcRn5/8LiVtHDkAAAAASUVORK5CYII=" style="width: 20px; class="navbar-brand-img" alt="NTA Logo">
-            </a>
+            
         </div>
     </nav>
+    <section class="section" style="margin-top: -36.9px;">
 
-    <section class="section" style="margin-top: -69px;">
         <div class="container d-flex flex-column">
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-lg-10 mx-auto py-5 py-md-9">
@@ -61,7 +118,7 @@
                                 <option value="Chemistry">Chemistry</option>
                             </select>
                         </div>
-                        <button class="btn w-100 btn-primary" type="submit">Get Solution</button>
+                        <button class="btn w-100 btn-primary" type="submit">Get Solutions</button>
                     </form>
 		
                 	    <div style="text-align: center; margin-top: 100px;"><p class="mb-0 fs-sm text-body-secondary mt-8">
@@ -79,6 +136,16 @@
         </div>
     </section>
 
+    <div id="iframeContainer">
+        <button id="closeIframe">
+  <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+  <span>Esc</span>
+</button>
+
+
+        <iframe id="pdfViewer"></iframe>
+    </div>
+    
     <script>
         document.getElementById("examForm").addEventListener("submit", function (event) {
             event.preventDefault();
@@ -86,27 +153,50 @@
             const shift = document.querySelector('input[name="shift"]:checked');
             const subject = document.getElementById("subject").value;
             
-            if (!examDate) {
-                alert("Please select an exam date.");
-                return;
-            }
-            if (!shift) {
-                alert("Please select your shift.");
-                return;
-            }
-            if (!subject) {
-                alert("Please select a subject.");
+            if (!examDate || !shift || !subject) {
+                alert("Please select all options.");
                 return;
             }
             
-            const datee = examDate.replaceAll("/", "").slice(0, 4); 
-            const shiftt = shift.value === "Morning" ? "Morning" : "Evening";
-            const subjectLovver = subject.toLowerCase();
+            const datee = examDate.replaceAll("/", "").slice(0, 4);
+            const shiftt = shift.value;
+            const subjectLower = subject.toLowerCase();
+            let SolxSolution = "Sol";
+            let withxWith = "With";
+            if (subject === "Chemistry") {
+                SolxSolution= "Solution";
+            }
+            if (examDate === "23/01/2025" && subjectLower === "mathematics" && shiftt === "Morning") {
+                withxWith= "with";
+            }
+            if (examDate === "28/01/2025" && subjectLower === "mathematics" && shiftt === "Morning") {
+                withxWith= "With%20";
+            }
             
-            const pdfUrl = `https://www.allenoverseas.com/wp-content/themes/ALLENOverseas/lp-assets/exam-page/2025/${subjectLovver}/${datee}-${subject}_Paper_With_Sol_${shiftt}.pdf`;
+            const pdfUrl = `https://www.allenoverseas.com/wp-content/themes/ALLENOverseas/lp-assets/exam-page/2025/${subjectLower}/${datee}-${subject}_Paper_${withxWith}_${SolxSolution}_${shiftt}.pdf`;
             
-            window.open(pdfUrl, "_blank");
+            document.body.classList.add("modal-open");
+            const iframeContainer = document.getElementById("iframeContainer");
+            const pdfViewer = document.getElementById("pdfViewer");
+            
+            pdfViewer.src = pdfUrl;
+            iframeContainer.style.display = "flex";
+        });
+        
+        // Close iframe on clicking the button
+        document.getElementById("closeIframe").addEventListener("click", function () {
+            document.getElementById("iframeContainer").style.display = "none";
+            document.body.classList.remove("modal-open");
+        });
+
+        // Close iframe on pressing the Escape key
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                document.getElementById("iframeContainer").style.display = "none";
+                document.body.classList.remove("modal-open");
+            }
         });
     </script>
-</body>
-</html>
+
+
+</body></html>
