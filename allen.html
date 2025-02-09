@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#1589EE">
-    <title>JEE Main Solutions with Explanations</title>
+    <title>JEE Main Solutions with Explanations by Allen</title>
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB60lEQVR4AY2RA6wdURCG57K2uXtrm3FqY1U7ZmM1LqJyWXvPqd24ipMqRm0bq6uZZ783yX84338wUB6+NRB8Z0gzz+w31zNE7hnCW08XsqiIxrSGe3P8/cOaefYgqIiQzQXPyIBnDeiOSfs8ve93VKFuCd8ph3LRDPyDowFwgPBAgi9TUpNkCFeR6UksuoxJk2uTYVSg93313Ro0FwoFukH/uXi1b02EvUgXTvFDE+Y0Z9KuZlydTe9nTYOFVzlD3DT+9MJxwOSb4C4tJJnM0EB404Q338sb4gQ4s2xKzJUeEEyKM+k1/DMzJ32979d64JxviG7e7N8LuDYL4aflMAnnIbRn8pbHzvClgS7cJqAKHCFs/bEHdwCuyjF36TuCahngNV4AUwzzyNSBoSFQNYKyk8139pC2caasRvhzTbjiCfQROMkDk5zVJ2Z1Cw1xG8InPjnDOia4ug7hr3XBJGRdaM7VuZj0jUxiTLY2n5jepWAPopPX0Hp9MO0148pc6H5+TRqd9pVtZBNM3pHkysqKa9d/+l5iIc0UaMm17nFXulzm7KF+NQRTLjHEQubSJkjhAJ/SPcGkfQh/rw+kvQSe3BzhZhzhc6ugItAR2p5d0QzN5qARw1PeYJkiEo1pjfbanF3erAXmlkcRn5/8LiVtHDkAAAAASUVORK5CYII=" type="image/x-icon">
     <link rel="stylesheet" href="https://www.mathongo.com/public/lk/assets/css/libs.bundle.css">
     <link rel="stylesheet" href="https://www.mathongo.com/public/lk/assets/css/theme.bundle.css">
@@ -73,18 +73,15 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            
-        </div>
+        <div class="container"></div>
     </nav>
     <section class="section" style="margin-top: -36.9px;">
-
         <div class="container d-flex flex-column">
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-lg-10 mx-auto py-5 py-md-9">
                     <h1 class="fw-bold text-center">JEE Main 2025 January Shiftwise Solutions</h1>
                     <p class="text-center mb-6 text-danger">
-                        Select your exam date and get the solutions by Allen based on the provisional answer key released by NTA.
+                        Select your exam shift and get the solutions by Allen based on the provisional answer key released by NTA.
                     </p>
                     <form id="examForm" class="mb-6">
                         <div class="form-group mb-6">
@@ -118,10 +115,18 @@
                                 <option value="Chemistry">Chemistry</option>
                             </select>
                         </div>
-                        <button class="btn w-100 btn-primary" type="submit">Get Solutions</button>
+                        <button class="btn w-100 btn-primary" type="submit">Display</button>
                     </form>
 		
-                	    <div style="text-align: center; margin-top: 100px;"><p class="mb-0 fs-sm text-body-secondary mt-8">
+<div style="text-align: center; margin-top: 100px;">
+<div style="text-align:center; margin-top:50px;">
+    <a href="https://jeeuncocked.vercel.app" target="_blank" 
+       style="font-size:18px; font-weight: bold; font-style: italic; color:#007bff; text-decoration:none; transition:color 0.3s ease-in-out;"
+       onmouseover="this.style.color='#2b50c7'" 
+       onmouseout="this.style.color='#007bff'">
+        Click For Unacademy Solutions
+    </a> </div>
+<p class="mb-0 fs-sm text-body-secondary mt-8">
               Credits
             		</p>
         <a class="navbar-brand" href="https://www.mathongo.com" style="margin-right: 20px; display: inline-block;">
@@ -141,8 +146,6 @@
   <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
   <span>Esc</span>
 </button>
-
-
         <iframe id="pdfViewer"></iframe>
     </div>
     
@@ -183,13 +186,11 @@
             iframeContainer.style.display = "flex";
         });
         
-        // Close iframe on clicking the button
         document.getElementById("closeIframe").addEventListener("click", function () {
             document.getElementById("iframeContainer").style.display = "none";
             document.body.classList.remove("modal-open");
         });
 
-        // Close iframe on pressing the Escape key
         document.addEventListener("keydown", function(event) {
             if (event.key === "Escape") {
                 document.getElementById("iframeContainer").style.display = "none";
@@ -198,5 +199,5 @@
         });
     </script>
 
-
-</body></html>
+</body>
+</html>
