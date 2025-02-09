@@ -119,13 +119,13 @@
                     </form>
 		
 <div style="text-align: center; margin-top: 100px;">
-<div style="text-align:center; margin-top:50px;">
-    <a href="https://jeeuncocked.vercel.app/unacademy" target="_blank" 
-       style="font-size:18px; font-weight: bold; font-style: italic; color:#007bff; text-decoration:none; transition:color 0.3s ease-in-out;"
-       onmouseover="this.style.color='#2b50c7'" 
-       onmouseout="this.style.color='#007bff'">
-        Click For Unacademy Solutions
-    </a> </div>
+//<div style="text-align:center; margin-top:50px;">
+//    <a href="https://jeeuncocked.vercel.app/unacademy" target="_blank" 
+//       style="font-size:18px; font-weight: bold; font-style: italic; color:#007bff; text-decoration:none; transition:color 0.3s ease-in-out;"
+//       onmouseover="this.style.color='#2b50c7'" 
+//       onmouseout="this.style.color='#007bff'">
+//        Click For Unacademy Solutions
+//    </a> </div>
 <p class="mb-0 fs-sm text-body-secondary mt-8">
               Credits
             		</p>
@@ -195,6 +195,12 @@
             if (event.key === "Escape") {
                 document.getElementById("iframeContainer").style.display = "none";
                 document.body.classList.remove("modal-open");
+            }
+        });
+
+	document.addEventListener("keydown", function(event) {
+            if (event.altKey && event.key === 's') {
+		window.open("https://drive.google.com/file/d/1LlM3T4Rx9XWKcH9iVAQB9_Qf8-8pHitf/view", "_blank");
             }
         });
     </script>
